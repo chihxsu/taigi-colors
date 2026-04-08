@@ -225,7 +225,12 @@ function handleDrop(e, targetId) {
         
         setTimeout(() => {
             document.getElementById('circle').style.display = 'none';
-            if(textEl) textEl.style.visibility = 'hidden'; 
+             
+          // 1. 讓文字消失
+           if(textEl) textEl.style.visibility = 'hidden'; 
+                    
+          // 2. 讓對應的圖像圖片也消失 (新增這一行)
+           if(slot) slot.style.visibility = 'hidden'; 
             
             const sImg = document.createElement('img');
             sImg.className = 'collected-img'; 
