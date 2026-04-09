@@ -27,9 +27,25 @@
 
         /* 遊戲板佈局：增加彈性換行 */
         #game-board { 
-            display: none; flex-direction: column; gap: 6vh; 
-            width: 100%; align-items: center; margin-top: 10px; 
-        }
+    		display: none; 
+    		flex-direction: column; 
+   		justify-content: center; /* 垂直置中 */
+    		align-items: center; 
+    		height: 70vh; /* 設定一個高度，讓 justify-content 有空間推開 */
+    		gap: 100px;  /* 這裡加大文字排與圖像排的垂直距離 (原本是 6vh) */
+    		width: 100%; 
+    		margin-top: 20px; 
+	}
+
+	/* 確保文字排在上方有足夠空間 */
+	#text-row {
+ 	   margin-bottom: 20px;
+	}
+
+	/* 確保圖像排（目標區）位於畫面更中央的位置 */
+	#item-row {
+	    margin-top: 20px;
+	}
 
         .row { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; width: 95%; max-width: 900px; }
 
